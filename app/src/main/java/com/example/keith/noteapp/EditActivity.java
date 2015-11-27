@@ -1,5 +1,9 @@
 package com.example.keith.noteapp;
 
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,8 +15,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class EditActivity extends AppCompatActivity {
 
@@ -20,11 +28,16 @@ public class EditActivity extends AppCompatActivity {
     private EditText editor;
     private EditText editorNum;
     private EditText editorDate;
+    private EditText editorCheck;
     //private Spinner editorSpinner;
     private String noteFilter;
     private String oldText;
     private String oldNum;
     private String oldDate;
+    private String oldCheck;
+    private static RadioGroup radioGroup;
+    private static RadioButton radioButtonMale;
+    private static RadioButton radioButtonFemale;
     //private Spinner oldSpinner;
 
     @Override
@@ -65,6 +78,30 @@ public class EditActivity extends AppCompatActivity {
             editor.requestFocus();
         }
 
+        RadioButton male = (RadioButton) findViewById(R.id.radioButtonMale);
+        male.setChecked(true);
+        checkButtonClick();
+
+    }
+
+    private void checkButtonClick() {
+
+        Button myButton = (Button) findViewById(R.id.radioButtonMale);
+        myButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                //get selected radio button from radioGroup
+                RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+                int selectedId = radioGroup.getCheckedRadioButtonId();
+
+                //find the radio button by returned id
+                RadioButton radio = (RadioButton) findViewById(selectedId);
+
+
+            }
+        });
     }
 
     @Override
@@ -148,4 +185,25 @@ public class EditActivity extends AppCompatActivity {
     public void onBackPressed() {
         finishEditing();
     }
+
+
+    public void onClickListenerButton() {
+        radioGroup = (RadioGroup)findViewById(R.id.radioGroup);
+        radioButtonMale = (RadioButton)findViewById(R.id.radioButtonMale);
+        radioButtonFemale = (RadioButton)findViewById(R.id.radioButtonFemale);
+
+        radioButtonMale.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int selected_id = radioGroup.getCheckedRadioButtonId();
+                        radioGroup = (RadioGroup)findViewById(selected_id);
+                    }
+                }
+        );
+    }
+
+
+
+
 }

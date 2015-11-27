@@ -21,6 +21,9 @@ import android.widget.Spinner;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -55,11 +58,12 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void insertNote(String noteText, String noteNumber, String noteDate) {
+    private void insertNote(String noteText, String noteNumber, String noteDate, String noteCheck) {
         ContentValues values = new ContentValues();
         values.put(DBOpenHelper.NOTE_TEXT, noteText);
         values.put(DBOpenHelper.NOTE_NUMBER, noteNumber);
         values.put(DBOpenHelper.NOTE_DATE, noteDate);
+        values.put(DBOpenHelper.NOTE_CHECK, noteCheck);
         //values.put(DBOpenHelper.NOTE_SPINNER, noteSpinner);
         Uri noteUri = getContentResolver().insert(NotesProvider.CONTENT_URI, values);
     }
@@ -113,9 +117,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void insertSampleData() {
-        insertNote("Simple note", "0187545", "0/0/0");
-        insertNote("Multi-line\nnote", "0151111\n44545", "0/0/0");
-        insertNote("Very long note with a lot of text that exceeds the width of the screen", "01111111151511554887788778787787878788787877877888","0/0/0");
+        insertNote("Simple note", "0187545", "0/0/0", "");
+        insertNote("Multi-line\nnote", "0151111\n44545", "0/0/0", "");
+        insertNote("Very long note with a lot of text that exceeds the width of the screen", "01111111151511554887788778787787878788787877877888","0/0/0", "");
         restartLoader();
     }
 
@@ -150,4 +154,5 @@ public class MainActivity extends AppCompatActivity
             restartLoader();
         }
     }
+
 }

@@ -18,4 +18,9 @@
     <string name="date_of_birth_field">DOB</string>
     <string name="enter_date_here">Enter birth here</string>
     <string name="pet_type_field">Pet Type</string>
+    <string name="gender_field">Gender</string>
+    <string name="female_button">Female</string>
+    <string name="male_button">Male</string>
+    <string name="pet_vaccine">Pet vaccine</string>
+    <string name="vaccine_checkbox">vaccineCheck</string>
 </resources>
