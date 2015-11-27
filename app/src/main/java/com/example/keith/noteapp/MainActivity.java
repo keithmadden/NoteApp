@@ -12,14 +12,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
+import android.widget.Spinner;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -54,11 +55,13 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void insertNote(String noteText) {
+    private void insertNote(String noteText, String noteNumber, String noteDate) {
         ContentValues values = new ContentValues();
         values.put(DBOpenHelper.NOTE_TEXT, noteText);
+        values.put(DBOpenHelper.NOTE_NUMBER, noteNumber);
+        values.put(DBOpenHelper.NOTE_DATE, noteDate);
+        //values.put(DBOpenHelper.NOTE_SPINNER, noteSpinner);
         Uri noteUri = getContentResolver().insert(NotesProvider.CONTENT_URI, values);
-        Log.d("MainActivity", "Inserted note " + noteUri.getLastPathSegment());
     }
 
     @Override
@@ -110,9 +113,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void insertSampleData() {
-        insertNote("Simple note");
-        insertNote("Multi-line\nnote");
-        insertNote("Very long note with a lot of text that exceeds the width of the screen");
+        insertNote("Simple note", "0187545", "0/0/0");
+        insertNote("Multi-line\nnote", "0151111\n44545", "0/0/0");
+        insertNote("Very long note with a lot of text that exceeds the width of the screen", "01111111151511554887788778787787878788787877877888","0/0/0");
         restartLoader();
     }
 

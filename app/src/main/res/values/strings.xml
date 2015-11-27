@@ -8,4 +8,14 @@
     <string name="new_note">New note</string>
     <string name="title_activity_edit">EditActivity</string>
     <string name="note_updated">Note updated</string>
+    <string name="action_delete">Delete</string>
+    <string name="note_deleted">Note deleted</string>
+    <string name="note">Note</string>
+    <string name="enter_note_here">Enter text here</string>
+    <string name="enter_phone_here">Enter phone here</string>
+    <string name="name_field">Name</string>
+    <string name="phone_field">Phone</string>
+    <string name="date_of_birth_field">DOB</string>
+    <string name="enter_date_here">Enter birth here</string>
+    <string name="pet_type_field">Pet Type</string>
 </resources>

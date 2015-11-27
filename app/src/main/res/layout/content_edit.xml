@@ -12,13 +12,102 @@
     tools:context="com.example.keith.noteapp.EditActivity"
     tools:showIn="@layout/activity_edit">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/name_field"
+        android:textSize="24dp"
+        android:textColor="@color/primary_text"
+        android:id="@+id/nameView"
+        android:layout_alignTop="@+id/editText"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/editPhone"
+        android:layout_toStartOf="@+id/editText"
+        android:gravity="center_vertical" />
+
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:gravity="top"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/enter_note_here"
+        android:textColorHint="@color/secondary_text_op"
+        android:inputType="textMultiLine|textCapSentences"
+        android:layout_alignStart="@+id/editPhone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_field"
+        android:textSize="24dp"
+        android:textColor="@color/primary_text"
+        android:id="@+id/phoneView"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@+id/editPhone"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignBottom="@+id/editPhone"
+        android:layout_toStartOf="@+id/editPhone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editPhone"
+        android:layout_below="@+id/editText"
+        android:hint="@string/enter_phone_here"
+        android:textColorHint="@color/secondary_text_op"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_of_birth_field"
+        android:textSize="24dp"
+        android:textColor="@color/primary_text"
+        android:id="@+id/DOBView"
+        android:layout_alignBottom="@+id/editDate"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/editDate"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editDate"
+        android:hint="@string/enter_date_here"
+        android:textColorHint="@color/secondary_text_op"
+        android:layout_below="@+id/editPhone"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/editPhone"
+        android:inputType="date" />
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/pet_type_field"-->
+    <!--android:id="@+id/textView2"-->
+    <!--android:textSize="24dp"-->
+    <!--android:textColor="@color/primary_text"-->
+    <!--android:layout_alignTop="@+id/spinner"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignBottom="@+id/spinner"-->
+    <!--android:layout_toStartOf="@+id/spinner"-->
+    <!--android:gravity="center_vertical"/>-->
+
+    <!--<Spinner-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/editSpinner"-->
+    <!--android:layout_below="@+id/editDate"-->
+    <!--android:layout_alignStart="@+id/editDate"-->
+    <!--android:textColorHint="@color/secondary_text_op"-->
+    <!--android:layout_marginTop="33dp" />-->
+
+
+
 </RelativeLayout>

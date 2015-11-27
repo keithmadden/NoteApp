@@ -4,4 +4,16 @@
     <color name="colorPrimaryDark">#6a1b9a</color>
     <color name="colorAccent">#03a9f4</color>
     <color name="list_item_text">#333333</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="secondary_text_op">#6d727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="grey600">#757575</color>
+    <color name="grey300">#E0E0E0</color>
+
+    <color name="primary_lighter">#E1E4F4</color>
+    <color name="primary_lightest">#F0F1F9</color>
 </resources>
