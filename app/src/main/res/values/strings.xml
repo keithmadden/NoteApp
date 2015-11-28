@@ -23,4 +23,6 @@
     <string name="male_button">Male</string>
     <string name="pet_vaccine">Pet vaccine</string>
     <string name="vaccine_checkbox">vaccineCheck</string>
+    <string name="enter_email_here">Enter email here</string>
+    <string name="email_field">Email</string>
 </resources>

@@ -3,10 +3,6 @@ package com.example.keith.noteapp;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Spinner;
-import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 
 
 public class DBOpenHelper extends SQLiteOpenHelper {
@@ -21,13 +17,12 @@ public class DBOpenHelper extends SQLiteOpenHelper {
     public static final String NOTE_TEXT = "noteText";
     public static final String NOTE_NUMBER = "noteNumber";
     public static final String NOTE_DATE = "noteDate";
-    public static final String NOTE_CHECK = "noteCheck";
-    //public static final String NOTE_SPINNER = "noteSpinner";
+    public static final String NOTE_EMAIL = "noteEmail";
     public static final String NOTE_CREATED = "noteCreated";
 
 
 
-    public static final String[] ALL_COLUMNS = {NOTE_ID, NOTE_TEXT, NOTE_NUMBER, NOTE_DATE, NOTE_CHECK, NOTE_CREATED};
+    public static final String[] ALL_COLUMNS = {NOTE_ID, NOTE_TEXT, NOTE_NUMBER, NOTE_DATE, NOTE_EMAIL, NOTE_CREATED};
 
     //SQL to create table
     private static final String TABLE_CREATE =
@@ -36,8 +31,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
                     NOTE_TEXT + " TEXT, " +
                     NOTE_NUMBER + " TEXT, " +
                     NOTE_DATE + " TEXT, " +
-                    NOTE_CHECK + " TEXT, " +
-                    //NOTE_SPINNER + " TEXT, " +
+                    NOTE_EMAIL + " TEXT, " +
                     NOTE_CREATED + " TEXT default CURRENT_TIMESTAMP" +
                     ")";
 

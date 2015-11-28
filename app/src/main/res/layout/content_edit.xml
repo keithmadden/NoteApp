@@ -89,83 +89,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/gender_field"
+        android:text="@string/email_field"
         android:textSize="24dp"
         android:textColor="@color/primary_text"
         android:id="@+id/textView"
-        android:layout_alignTop="@+id/radioGroup"
-        android:layout_alignParentStart="true" />
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_below="@+id/editDate"
-        android:layout_toEndOf="@+id/phoneView"
-        android:layout_marginTop="34dp"
-        android:id="@+id/radioGroup">
-
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/male_button"
-            android:id="@+id/radioButtonMale" />
-
-        <RadioButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/female_button"
-            android:id="@+id/radioButtonFemale" />
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pet_vaccine"
-        android:textSize="24dp"
-        android:textColor="@color/primary_text"
-        android:id="@+id/pet_vaccine"
-        android:layout_alignTop="@+id/vaccineCheckbox"
+        android:layout_alignTop="@+id/editEmail"
         android:layout_alignParentStart="true"
-        android:layout_alignBottom="@+id/vaccineCheckbox"
-        android:layout_toStartOf="@+id/vaccineCheckbox" />
+        android:layout_alignBottom="@+id/editEmail"
+        android:layout_toStartOf="@+id/editEmail"
+        android:gravity="center_vertical" />
 
-    <CheckBox
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/vaccine_checkbox"
-        android:id="@+id/vaccineCheckbox"
+        android:id="@+id/editEmail"
         android:textColorHint="@color/secondary_text_op"
-        android:layout_below="@+id/radioGroup"
-        android:layout_alignStart="@+id/radioGroup"
-        android:layout_marginTop="32dp"
-        android:layout_alignEnd="@+id/radioGroup" />
-
-
-
-
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/pet_type_field"-->
-    <!--android:id="@+id/textView2"-->
-    <!--android:textSize="24dp"-->
-    <!--android:textColor="@color/primary_text"-->
-    <!--android:layout_alignTop="@+id/spinner"-->
-    <!--android:layout_alignParentStart="true"-->
-    <!--android:layout_alignBottom="@+id/spinner"-->
-    <!--android:layout_toStartOf="@+id/spinner"-->
-    <!--android:gravity="center_vertical"/>-->
-
-    <!--<Spinner-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:id="@+id/editSpinner"-->
-    <!--android:layout_below="@+id/editDate"-->
-    <!--android:layout_alignStart="@+id/editDate"-->
-    <!--android:textColorHint="@color/secondary_text_op"-->
-    <!--android:layout_marginTop="33dp" />-->
-
+        android:hint="@string/enter_email_here"
+        android:layout_below="@+id/editDate"
+        android:layout_alignStart="@+id/editDate"
+        android:layout_alignEnd="@+id/editDate"
+        android:layout_marginTop="32dp" />
 
 
 </RelativeLayout>
